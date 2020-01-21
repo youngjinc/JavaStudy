@@ -2,10 +2,10 @@ package prob13;
 
 import java.util.Scanner;
 
-public class p2 {
+public class P2 {
     public static void main(String[] args) {
         //메인 스레드는 키보드에서 입력된 값을 점검해 1이면 MyThread에 인터럽트를 검
-        MyThread t = new MyThread();
+        WorkerThread2 t = new WorkerThread2();
         t.start();
 
         Scanner in = new Scanner(System.in);
@@ -14,7 +14,7 @@ public class p2 {
         System.out.println("작업 완료.");
     }
 }
-class MyThread extends Thread {
+class WorkerThread2 extends Thread {
     @Override
     public void run() {
         try {
